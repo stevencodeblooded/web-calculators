@@ -1,0 +1,248 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    color: #334155;
+    background-color: #f8fafc;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #0f172a;
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+h2 {
+    color: #1e293b;
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem;
+    font-weight: 600;
+}
+
+h3 {
+    color: #334155;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+/* Calculator layout */
+.calculator-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+/* Input section styles */
+.input-section {
+    background-color: #f8fafc;
+    padding: 1.5rem;
+    width: 100%;
+    border-radius: 0.75rem;
+    border: 1px solid #e2e8f0;
+}
+
+.input-group {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    color: #475569;
+    margin-bottom: 0.25rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+button:active {
+    background-color: #1d4ed8;
+}
+
+/* Results section styles */
+.results-section {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    width: 100%;
+    border: 1px solid #e2e8f0;
+}
+
+.summary-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background-color: #f8fafc;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+}
+
+.stat-card h3 {
+    font-size: 1rem;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+/* Charts container styles */
+.charts-container {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.chart-wrapper {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e2e8f0;
+}
+
+/* Recommendations styles */
+.recommendations {
+    background-color: #f0f9ff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #bae6fd;
+}
+
+.recommendations h2 {
+    color: #0369a1;
+    margin-top: 0;
+}
+
+#recommendations-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#recommendations-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #bae6fd;
+    color: #0c4a6e;
+}
+
+#recommendations-list li:last-child {
+    border-bottom: none;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .calculator-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .container {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .summary-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    h1 {
+        font-size: 1.75rem;
+    }
+    
+    .input-section, .results-section {
+        padding: 1rem;
+    }
+}
+
+/* Loading state */
+button.loading {
+    background-color: #93c5fd;
+    cursor: not-allowed;
+    position: relative;
+}
+
+button.loading::after {
+    content: '';
+    position: absolute;
+    width: 1.25rem;
+    height: 1.25rem;
+    top: 50%;
+    left: 50%;
+    margin: -0.625rem 0 0 -0.625rem;
+    border: 2px solid white;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: button-loading-spinner 1s linear infinite;
+}
+
+@keyframes button-loading-spinner {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}

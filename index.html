@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial & Lifestyle Calculators</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #334155;
+            background-color: #f8fafc;
+        }
+
+        .header {
+            background-color: #1e293b;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .calculator-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .calculator-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        .calculator-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+
+        .card-image {
+            height: 160px;
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h2 {
+            font-size: 1.5rem;
+            color: #1e293b;
+            margin-bottom: 0.75rem;
+        }
+
+        .card-content p {
+            color: #64748b;
+            margin-bottom: 1.5rem;
+            min-height: 4.8em;
+        }
+
+        .card-link {
+            display: inline-block;
+            padding: 0.4rem 1.5rem;
+            background-color: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .card-link:hover {
+            background-color: #2563eb;
+        }
+
+        footer {
+            background-color: #1e293b;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 3rem 1rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .calculator-grid {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Financial & Lifestyle Calculators</h1>
+        <p>Make informed decisions with our suite of professional calculators for investment, health, sustainability, and retirement planning.</p>
+    </header>
+
+    <main class="calculator-grid">
+        <div class="calculator-card">
+            <a href="loan-calculator.html" target="_blank" rel="noopener noreferrer">
+                <div class="card-image" style="background-image: url('./assets/loan.png');"></div>
+            </a>
+            <div class="card-content">
+                <h2>Loan Calculator</h2>
+                <p>Allows users to input loan amount, interest rate, and term length to calculate monthly payments while displaying detailed amortization schedules and interactive charts for visualizing payment breakdowns.</p>
+                <a href="loan-calculator.html" target="_blank" class="card-link">Start Calculating</a>
+            </div>
+        </div>
+
+        <div class="calculator-card">
+            <a href="portfolio-rebalancing.html" target="_blank" rel="noopener noreferrer">
+                <div class="card-image" style="background-image: url('./assets/portfolio-rebalancing.png');"></div>
+            </a>
+            <div class="card-content">
+                <h2>Investment Portfolio Rebalancing</h2>
+                <p>Optimize your investment portfolio with our advanced rebalancing calculator. Track asset allocation and get tax-smart rebalancing recommendations.</p>
+                <a href="portfolio-rebalancing.html" target="_blank" class="card-link">Start Calculating</a>
+            </div>
+        </div>
+
+        <div class="calculator-card">
+            <a href="fitness-calculator.html" target="_blank" rel="noopener noreferrer">
+                <div class="card-image" style="background-image: url('./assets/fitness-body.png');"></div>
+            </a>
+            <div class="card-content">
+                <h2>Fitness & Body Composition</h2>
+                <p>Get detailed insights into your body composition, calculate your ideal macros, and track your fitness progress over time. Check it out.</p>
+                <a href="fitness-calculator.html" target="_blank" class="card-link">Start Calculating</a>
+            </div>
+        </div>
+
+        <div class="calculator-card">
+            <a href="solar-roi.html" target="_blank" rel="noopener noreferrer">
+                <div class="card-image" style="background-image: url('./assets/solar.png');"></div>
+            </a>
+            <div class="card-content">
+                <h2>Solar Panel ROI</h2>
+                <p>Evaluate the financial benefits of solar installation with our ROI calculator. Get detailed cost savings and break-even analysis.</p>
+                <a href="solar-roi.html" target="_blank" class="card-link">Start Calculating</a>
+            </div>
+        </div>
+
+        <div class="calculator-card">
+            <a href="carbon-footprint.html" target="_blank" rel="noopener noreferrer">
+                <div class="card-image" style="background-image: url('./assets/carbon.png');"></div>
+            </a>
+            <div class="card-content">
+                <h2>Carbon Footprint</h2>
+                <p>Measure your environmental impact and discover practical ways to reduce your carbon footprint with our comprehensive calculator.</p>
+                <a href="carbon-footprint.html" target="_blank" class="card-link">Start Calculating</a>
+            </div>
+        </div>
+
+        <div class="calculator-card">
+            <a href="retirement-calculator.html" target="_blank" rel="noopener noreferrer">
+                <div class="card-image" style="background-image: url('./assets/nestegg.png');"></div>
+            </a>
+            <div class="card-content">
+                <h2>Retirement Nest Egg</h2>
+                <p>Plan your retirement with confidence using our Monte Carlo simulation calculator. Visualize different scenarios and optimize your strategy.</p>
+                <a href="retirement-calculator.html" target="_blank" class="card-link">Start Calculating</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Financial & Lifestyle Calculators. All rights reserved.</p>
+    </footer>
+</body>
+</html>
